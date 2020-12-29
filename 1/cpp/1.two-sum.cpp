@@ -61,10 +61,9 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
 	    vector<int> ans;
-	    for (auto i : nums) {
-		ans.push_back(i);
-	
-	    }
+	    for (int i=0; i<ans.size();i++)
+
+
 
         
     }
