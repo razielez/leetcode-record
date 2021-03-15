@@ -1,6 +1,6 @@
 package com.lin.p4;
 
-public class Solution4 {
+public class Solution4_2 {
 
   public static void main(String[] args) {
     int[] num1 = new int[]{1, 2, 3, 5, 7, 9};
@@ -16,7 +16,35 @@ public class Solution4 {
     int l = (len1 + len2 + 1) >> 1;
     int r = (len1 + len2 + 2) >> 1;
 
-    System.out.println(getK(nums1, 0, nums2, 0, 7));
+    int i = 0;
+    int j = 0;
+    int cur = 0;
+
+    int n = nums1[0];
+    int m = nums2[0];
+
+    while (true) {
+      if (cur >= r) {
+        break;
+      }
+
+      if (i <= len1) {
+        n = nums1[i];
+      }
+
+      if (j <= len2) {
+        m = nums2[j];
+      }
+      // n m
+      if (n < m) {
+        cur++;
+        i++;
+      } else {
+        j++;
+      }
+
+    }
+
 
     return getK(nums1, 0, nums2, 0, l) + getK(nums1, 0, nums2, 0, r) / 2.0;
   }
